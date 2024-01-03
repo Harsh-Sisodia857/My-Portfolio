@@ -5,6 +5,7 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { MdMail } from "react-icons/md";
 
 const ContactMe = () => {
     return (
@@ -52,6 +53,16 @@ const ContactMe = () => {
               className="icon-colour home-social-icons"
             >
               <AiFillInstagram />
+            </a>
+          </li>
+          <li className="social-icons">
+            <a
+              href="mailto:harshkumarsisodia99@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+              className="icon-colour home-social-icons"
+            >
+              <MdMail />
             </a>
           </li>
         </ul>
