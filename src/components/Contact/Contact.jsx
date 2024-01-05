@@ -12,15 +12,34 @@ function ContactForm() {
   const [message, setMessage] = useState("");
   const alert = useAlert();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Company:", company);
-    console.log("Role Offered:", roleOffered);
-    console.log("Message:", message);
-    alert.info("I will Reach Out to You Soon!");
-    // You can add additional logic here, such as sending the form data to a server.
+      try {
+        const response = await fetch("http://localhost:4000/api/formData", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            company,
+            roleOffered,
+            message,
+          }),
+        });
+
+        if (response.ok) {
+          console.log("Form data submitted successfully!");
+          alert.info("I will Reach Out to You Soon!");
+        } else {
+          console.error("Error submitting form data:", response.statusText);
+          alert.error("Error submitting form. Please try again later.");
+        }
+    } catch (error) {
+        console.error("Error submitting form data:", error);
+        alert.error("Error submitting form. Please try again later.");
+    }
   };
 
   return (
