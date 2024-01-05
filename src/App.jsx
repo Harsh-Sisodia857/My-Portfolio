@@ -13,6 +13,7 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import ContactForm from "./components/Contact/Contact";
 
 function App() {
   
@@ -24,6 +25,7 @@ function App() {
           <Route path="/project" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/contact" element={<ContactForm />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />

@@ -3,16 +3,14 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../assets/logo.png";
-import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import "../style.css"
 import {
-  AiFillStar,
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
 } from "react-icons/ai";
-
+import { BsFillTelephoneOutboundFill } from "react-icons/bs";
 import { CgFileDocument } from "react-icons/cg";
 
 function NavBar() {
@@ -54,6 +52,13 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link as={Link} to="/resume">
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link as={Link} to="/contact">
+                <BsFillTelephoneOutboundFill style={{ marginBottom: "2px" }} />
+                <span style={{marginLeft : "8px"}}>Contact Me</span>
               </Nav.Link>
             </Nav.Item>
           </Nav>
