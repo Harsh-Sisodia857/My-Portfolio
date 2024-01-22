@@ -21,6 +21,12 @@
   flex-direction: column;
 }
 
+.required {
+    color: red;
+    margin-left: 2px;
+    font-size: 20px;
+}
+
 .input-field {
   width: 100%;
   padding: 8px;

@@ -17,6 +17,10 @@ const formDataSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    ctc: {
+        type: Number,
+        required: true,
+    },
     message: {
         type: String,
         required: true,

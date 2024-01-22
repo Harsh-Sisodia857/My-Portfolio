@@ -13,11 +13,15 @@ router.post('/formData', async (req, res) => {
         
         res.status(201).json({
             message: "Form data submitted successfully!",
+            success : true,
             formData
         });
     } catch (error) {
         console.error("Error submitting form data:", error);
-        res.status(500).json({ error: "Internal Server Error" });
+        res.status(500).json({
+            error: "Internal Server Error",
+            success : false
+        });
     }
 });
 
