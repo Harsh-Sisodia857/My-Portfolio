@@ -46,7 +46,10 @@ function Intro() {
               </i>
             </p>
           </Col>
-          <Col md={4} className="myAvtar">
+          <Col
+            md={4}
+            className="myAvtar d-flex justify-content-center align-items-center"
+          >
             <Tilt>
               <img src={myImg} className="img-fluid" alt="avatar" />
             </Tilt>

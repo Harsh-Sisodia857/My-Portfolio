@@ -154,11 +154,35 @@ button:focus {
 .navbar-brand {
   color: rgb(250, 250, 250) !important;
 }
-/* 
+
 .logo {
-  height: 1.4em !important;
-  width: 2.5em !important;
-} */
+  width: 100px;
+  height: 100px;
+}
+
+@media (max-width : 280px){
+  .logo{
+    width: 85px;
+  }
+  .navbar{
+    padding: 1rem 0rem !important;
+  }
+}
+
+.nav-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+@media (max-width : 990px){
+    .nav-box{
+      border-top: 2px solid white;
+    }
+    .home-content{
+      padding: 2rem !important;
+    }
+}
 
 .navbar-nav .nav-link {
   color: white !important;
@@ -266,7 +290,7 @@ button:focus {
 }
 
 .home-content {
-  padding: 9rem 0 2rem !important;
+  padding: 9rem 0 2rem ;
   color: whitesmoke;
   text-align: left;
 }
@@ -389,10 +413,32 @@ button:focus {
   text-shadow: 0 0 2px #87209e;
 }
 
+@media (max-width : 325px){
+  .home-about-social-links{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+  }
+}
+
 .social-icons {
   display: inline-block !important;
   padding-right: 15px;
   padding-left: 15px;
+}
+
+@media (max-width : 400px){
+  .social-icons {
+  width: 20%;
+  padding-right: 0px;
+}
+}
+
+@media (max-width : 325px){
+  .social-icons {
+    padding: 10px !important;
+}
+
 }
 
 .icon-colour {

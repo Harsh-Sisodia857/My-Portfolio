@@ -4,44 +4,61 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
-import "../style.css"
 import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
 } from "react-icons/ai";
+import { AiOutlineMenu } from "react-icons/ai"; 
 import { BsFillTelephoneOutboundFill } from "react-icons/bs";
 import { CgFileDocument } from "react-icons/cg";
+import "../style.css";
 
 function NavBar() {
+  const [expanded, setExpanded] = useState(false);
+
   return (
-    <Navbar className="sticky">
+    <Navbar expand="lg" className="sticky">
       <Container>
         <Navbar.Brand href="/" className="d-flex">
           <img
             src={logo}
-            style={{ width: "100px", height: "100px" }}
             className="logo"
             alt="brand"
           />
         </Navbar.Brand>
 
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto" defaultActiveKey="#home">
+        <Navbar.Toggle
+          aria-controls="responsive-navbar-nav"
+          onClick={() => setExpanded(!expanded)}
+        >
+          <AiOutlineMenu size={24} style={{color : "orange"}} />
+        </Navbar.Toggle>
+
+        <Navbar.Collapse id="responsive-navbar-nav" expanded={expanded}>
+          <Nav className="ms-auto nav-box" defaultActiveKey="#home">
             <Nav.Item>
-              <Nav.Link as={Link} to="/">
+              <Nav.Link as={Link} to="/" onClick={() => setExpanded(false)}>
                 <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
-              <Nav.Link as={Link} to="/about">
+              <Nav.Link
+                as={Link}
+                to="/about"
+                onClick={() => setExpanded(false)}
+              >
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
-              <Nav.Link as={Link} to="/project">
+              <Nav.Link
+                as={Link}
+                to="/project"
+                onClick={() => setExpanded(false)}
+              >
                 <AiOutlineFundProjectionScreen
                   style={{ marginBottom: "2px" }}
                 />{" "}
@@ -50,15 +67,23 @@ function NavBar() {
             </Nav.Item>
 
             <Nav.Item>
-              <Nav.Link as={Link} to="/resume">
+              <Nav.Link
+                as={Link}
+                to="/resume"
+                onClick={() => setExpanded(false)}
+              >
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
-              <Nav.Link as={Link} to="/contact">
+              <Nav.Link
+                as={Link}
+                to="/contact"
+                onClick={() => setExpanded(false)}
+              >
                 <BsFillTelephoneOutboundFill style={{ marginBottom: "2px" }} />
-                <span style={{marginLeft : "8px"}}>Contact Me</span>
+                <span style={{ marginLeft: "8px" }}>Contact Me</span>
               </Nav.Link>
             </Nav.Item>
           </Nav>
