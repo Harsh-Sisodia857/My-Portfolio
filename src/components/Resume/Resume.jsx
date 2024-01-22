@@ -59,7 +59,7 @@ function ResumeNew() {
           </Button>
         </Row>
 
-        <Row className="resume">
+        <Row className="resume d-none d-md-block">
           {resumeUrl && (
             <Document
               file={resumeUrl}
