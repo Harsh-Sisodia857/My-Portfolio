@@ -11,6 +11,7 @@ import Ecommerce from "../../assets/Projects/E-commerce1.png";
 import RandomGIF from "../../assets/Projects/RandomGIF1.png";
 import ShoppingSite from "../../assets/Projects/ShoppingSite1.png";
 import TextUtils from "../../assets/Projects/TextUtils1.png";
+import keepingSecret from "../../assets/Projects/keepingSecret.png";
 
 function Projects() {;
   return (
@@ -32,6 +33,7 @@ function Projects() {;
                 "Swigoto is a feature-rich food delivery web application designed to provide users with a seamless and convenient experience in ordering and enjoying their favorite meals from local restaurants.\n\n**Technology Used:**\n- REACT JS\n- REDUX\n- TAILWIND CSS\n- BOOTSTRAP\n- NODE JS\n- EXPRESS JS\n- MONGODB\n- CLOUDINARY\n- JWT FOR AUTHENTICATION"
               }
               gitHub="https://github.com/Harsh-Sisodia857/Swigoto"
+              HostedLink="https://swigoto.onrender.com/"
             />
           </Col>
 
@@ -56,6 +58,17 @@ function Projects() {;
               }
               gitHub="https://github.com/Harsh-Sisodia857/Todo-Web-App---MERN-Stack"
               HostedLink="https://todowebappbyharsh.netlify.app/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={keepingSecret}
+              title="Keeping Secret"
+              description={
+                "The Keeping Secret Web Application is a full-stack MERN application designed to share the secret of a person without revealing its identity.A person is allowed to share a single secret to others while creating a Public Secret.It works like a diary For a Person.\n\n**Technology Used:**\n- REACT JS\n- BOOTSTRAP\n- NODE JS\n- EXPRESS JS\n- MONGODB ATLAS\n- JWT FOR AUTHENTICATION"
+              }
+              gitHub="https://github.com/Harsh-Sisodia857/Keeping-Secret"
+              HostedLink="https://secret-o3ng.onrender.com/"
             />
           </Col>
 
