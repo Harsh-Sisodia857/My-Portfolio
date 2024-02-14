@@ -34,7 +34,6 @@ function ResumeNew() {
   const handleChangeResume = () => {
      navigate("/login");
   }
-  console.log(resumeUrl)
   return (
     <div>
       <Container fluid className="resume-section">

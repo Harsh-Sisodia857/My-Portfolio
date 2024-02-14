@@ -57,7 +57,7 @@ function Projects() {;
                 "The Todo Web Application is a full-stack MERN application designed to help users manage their tasks efficiently.\n\n**Technology Used:**\n- REACT JS\n- REDUX\n- BOOTSTRAP\n- NODE JS\n- EXPRESS JS\n- MONGODB\n- JWT FOR AUTHENTICATION"
               }
               gitHub="https://github.com/Harsh-Sisodia857/Todo-Web-App---MERN-Stack"
-              HostedLink="https://todowebappbyharsh.netlify.app/"
+              HostedLink="https://to-do-web-app-3wms.onrender.com/"
             />
           </Col>
           <Col md={4} className="project-card">
